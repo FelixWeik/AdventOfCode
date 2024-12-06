@@ -50,11 +50,7 @@ vector<int> getUpdate(const string& line) {
 int main() {
     string filename = "input05.txt";
     ifstream input_file(filename);
-
-    if (!input_file.is_open()) {
-        cerr << "Fehler beim Öffnen der Datei: " << filename << endl;
-        return 1;
-    }
+    assert(input_file);
 
     vector<string> rules;
     vector<vector<int>> updates;
