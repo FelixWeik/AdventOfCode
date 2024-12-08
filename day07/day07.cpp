@@ -30,14 +30,9 @@ bool canEvaluateToTarget(const vector<long long>& numbers, int index, long long 
 int main() {
     ifstream inputFile("input07.txt");
     assert(inputFile);
-    if (!inputFile) {
-        cerr << "Fehler beim Öffnen der Datei input07.txt" << endl;
-        return 1;
-    }
 
     string line;
     long long res = 0;
-
     while (getline(inputFile, line)) {
         long long target;
         if (processLine(line, target)) {
